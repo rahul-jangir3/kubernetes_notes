@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: apache-manager-rolebinding
+  namespace: apache
+subjects:             # here we can bind multiple users, groups, serviceaccounts
+  - kind: User        # this data is we created in service-account.yml
+    name: apache-user
+    apiGroup: rbac.authorization.k8s.io
+roleRef:              # here we can bind only one role
+  kind: Role          # this data is we created in role.yml
+  name: apache-manager
+  apiGroup: rbac.authorization.k8s.io

@@ -1,0 +1,17 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nginx-pod
+  namespace: nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+       - containerPort: 80
+  tolerations:
+    - key: "prod" # here prod is key that we use while tainting the node
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
+         

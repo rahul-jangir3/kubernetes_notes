@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: one-time-task
+spec:
+  template:
+    spec:
+      containers:
+      - name: my-container
+        image: busybox # Or your desired image
+        command: ["/bin/sh", "-c", "echo 'Running my task' && sleep 5 && echo 'Task completed'"] # Your task commands
+      restartPolicy: Never
+  backoffLimit: 0 # Prevent retries on failure
