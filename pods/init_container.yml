@@ -1,0 +1,16 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: init-test 
+spec:
+  initContainers:
+  # This is the init container
+  - name: init-container
+    image: busybox:latest
+    command: ['sh', '-c', "echo 'Initalization started ...'; sleep 10; echo 'Initalization completed...'"]
+
+  # This is the main application container
+  containers:
+    - name: main-container
+      image: busybox:latest
+      command: ['sh', '-c', "echo 'Main container started ...'"]  

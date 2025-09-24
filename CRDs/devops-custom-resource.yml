@@ -1,0 +1,9 @@
+kind: DevopsBatch
+apiVersion: mycustombatch.com/v1
+metadata:
+  name: devops-batch-10
+spec:
+  name: "DevOps Batch 10"
+  duration: "6 months"
+  platform: "rahul.com"
+  mode: "Live"

@@ -1,0 +1,9 @@
+kind: Car
+apiVersion: mycar.com/v1
+metadata:
+  name: nano
+spec:
+  name: "Tata Nano"
+  company: "Tata"
+  color: "White"
+  price: 300000
