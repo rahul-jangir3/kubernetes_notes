@@ -1,0 +1,1 @@
+notes url - https://rogue-athlete-040.notion.site/Kubernetes-K8S-Notes-233ce77caf2480a296c2d0ad4216d745?source=copy_link
